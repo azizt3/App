@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+import './common/rpslogic.js'
+
 
 function Weapon(props){
   return(
@@ -13,7 +15,10 @@ function GameStatus(props) {
   )
 }
 
-function ScoreBoard(){
+function ScoreBoard(props){
+  return(
+    <h2>Score 0-0</h2>
+  )
 }
 
 function App() {
@@ -29,7 +34,7 @@ function App() {
       <Weapon onClickFunction = {roundCounter} weapon ='Paper'/>
       <Weapon onClickFunction = {roundCounter} weapon ='Scissors'/>
       <GameStatus message = {counter}/>
-      <h2> Scoreboard: </h2>
+      <ScoreBoard weapon/>
   
     </div>
   );
