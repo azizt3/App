@@ -1,18 +1,23 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-    
-      <h1>Vite</h1>
-     
-    </>
+function Weapon(props){
+  return(
+    <button> {props.weapon} </button>
   )
 }
+
+function App() {
+	return (
+    
+    <div>
+      <h1>Begin 5 rounds!</h1>
+      <Weapon weapon ='Rock'/>
+      <Weapon weapon ='Paper'/>
+      <Weapon weapon ='Scissors'/>
+    </div>
+  );
+}
+
 
 export default App
