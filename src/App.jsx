@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import './common/rpslogic.js'
-import utils from './common/rpslogic.js'
+import {getComputerChoice} from './common/rpslogic.js'
 
 
 function Weapon(props){
@@ -25,9 +24,9 @@ function ScoreBoard(props){
 function App() {
 
   const[counter, setCounter] = useState(0);
-  const[computerWeapon, setComputerWeapon] = useState("");
+  const[computerWeapon, setComputerWeapon] = useState();
   const roundCounter = () => setCounter(counter + 1 );
-  const weaponSelector = () => setComputerWeapon(utils.computerChoice);
+  const weaponSelector = () => setComputerWeapon(getComputerChoice);
 
 	return (
     
