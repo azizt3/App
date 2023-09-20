@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 import './common/rpslogic.js'
+import utils from './common/rpslogic.js'
 
 
 function Weapon(props){
   return(
-    <button onClick = {props.onClickFunction}> {props.weapon} </button>
+    <button onClick = {() => props.onClickFunction}> {props.weapon} </button>
   )
 }
 
@@ -17,24 +18,26 @@ function GameStatus(props) {
 
 function ScoreBoard(props){
   return(
-    <h2>Score 0-0</h2>
+    <h2>{props.display}</h2>
   )
 }
 
 function App() {
 
   const[counter, setCounter] = useState(0);
+  const[computerWeapon, setComputerWeapon] = useState("");
   const roundCounter = () => setCounter(counter + 1 );
+  const weaponSelector = () => setComputerWeapon(utils.computerChoice);
 
 	return (
     
     <div>
       <h1>Begin 5 rounds!</h1>
-      <Weapon onClickFunction = {roundCounter} weapon ='Rock'/>
-      <Weapon onClickFunction = {roundCounter} weapon ='Paper'/>
-      <Weapon onClickFunction = {roundCounter} weapon ='Scissors'/>
+      <Weapon onClickFunction = {roundCounter, weaponSelector} weapon ='Rock'/>
+      <Weapon onClickFunction = {roundCounter, weaponSelector} weapon ='Paper'/>
+      <Weapon onClickFunction = {roundCounter, weaponSelector} weapon ='Scissors'/>
       <GameStatus message = {counter}/>
-      <ScoreBoard weapon/>
+      <ScoreBoard display = {computerWeapon}/>
   
     </div>
   );

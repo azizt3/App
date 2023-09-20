@@ -1,1 +1,5 @@
 functions in React need to have capital first letter.
+
+9/19/23 - Made a basic template. Need to wire in the application logic now into the UI
+        - Figure out how to bring in a script (with business logic) and wire into App.jsx to display
+        - game results (ie score, who won, what the computer  selected ,etc).
