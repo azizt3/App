@@ -1,5 +1,12 @@
 functions in React need to have capital first letter.
 
-9/19/23 - Made a basic template. Need to wire in the application logic now into the UI
+9/19/23 - Made a basic template. Need to wire in the application logic now into the UI 
         - Figure out how to bring in a script (with business logic) and wire into App.jsx to display
         - game results (ie score, who won, what the computer  selected ,etc).
+
+
+9/20/23 - Got the display UI running and wired up to reflect changes in state.
+        - Implemented some UI logic to display the game status, round #, who is winning, and a W-L record.
+        - Tomorrow will need to implement the actual game logic and try to implement back-end logic as well. 
+        - current status function works. But it has to be invoked on an event. Figure out how to have multiple 
+        - functions get invoked as part of the onClickFunction (pretty sure you need to abstract out both operations in another function, and have that invoked when click event happens. )
