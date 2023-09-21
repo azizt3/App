@@ -9,4 +9,4 @@ functions in React need to have capital first letter.
         - Implemented some UI logic to display the game status, round #, who is winning, and a W-L record.
         - Tomorrow will need to implement the actual game logic and try to implement back-end logic as well. 
         - current status function works. But it has to be invoked on an event. Figure out how to have multiple 
-        - functions get invoked as part of the onClickFunction (pretty sure you need to abstract out both operations in another function, and have that invoked when click event happens. )
+        - functions get invoked as part of the onClickFunction (pretty sure you need to abstract out both operations in another function, and have that invoked when click event happens. ) - DONE
